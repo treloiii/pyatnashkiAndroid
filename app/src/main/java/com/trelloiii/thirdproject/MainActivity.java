@@ -91,11 +91,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
-        assert data != null;
-      //  HEIGHT=
-       // grid.setColumnCount(HEIGHT);
-        remakeGrid(data.getIntExtra("count",-1)+4);
+        if(resultCode==11) {
+            assert data != null;
+            remakeGrid(data.getIntExtra("count", -1) + 4);
+        }
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)

@@ -16,7 +16,7 @@ import androidx.appcompat.app.AlertDialog;
 
 public class SettingsActivity extends Activity {
 
-    private Button button;
+    private Button button,back;
     private SeekBar countBar;
     private TextView counter;
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -25,6 +25,7 @@ public class SettingsActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings);
         button=findViewById(R.id.button);
+        back=findViewById(R.id.back);
         countBar=findViewById(R.id.countBar);
         counter=findViewById(R.id.counter);
 
@@ -66,7 +67,11 @@ public class SettingsActivity extends Activity {
             AlertDialog alert=builder.create();
             alert.show();
         });
-        Toast.makeText(this, "REQ " + getIntent().getIntExtra("req",-1), Toast.LENGTH_SHORT).show();
+        back.setOnClickListener(v->{
+            Intent intent=new Intent();
+            setResult(0,intent);
+            finish();
+        });
     }
 
 }
