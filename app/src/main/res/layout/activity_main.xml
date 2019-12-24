@@ -7,6 +7,19 @@
     android:background="#2B3661"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="12dp"
+        android:text="0"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/grid"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <ImageView
         android:id="@+id/settings"
         android:layout_width="80dp"
@@ -50,13 +63,25 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="80dp"
         android:layout_height="70dp"
-        android:layout_marginTop="77dp"
-        android:layout_marginEnd="146dp"
-        android:layout_marginRight="146dp"
+        android:layout_marginEnd="328dp"
+        android:layout_marginRight="328dp"
         android:background="@color/colorAccent"
         android:text="1"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Число ходов"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/grid"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
